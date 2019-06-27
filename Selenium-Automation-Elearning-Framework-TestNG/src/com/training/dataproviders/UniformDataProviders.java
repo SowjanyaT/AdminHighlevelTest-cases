@@ -15,12 +15,12 @@ public class UniformDataProviders {
 	@DataProvider(name = "db-inputs")
 	public Object [][] getDBData() {
 
-		List<UniformBean> list = new UniformDAO().getLogins(); 
+		List<UniformBean> list = new UniformDAO().getuniforms(); 
 		
 		Object[][] result = new Object[list.size()][]; 
 		int count = 0; 
 		for(UniformBean temp : list){
-			Object[]  obj = new Object[2]; 
+			Object[]  obj = new Object[4]; 
 			obj[0] = temp.getName(); 
 			obj[1] = temp.getDescription(); 
 			obj[2]=temp.getMetatag();

@@ -27,8 +27,8 @@ public class UniformDAO {
 		}
 	}
 	
-	public List<UniformBean> getLogins(){
-		String sql = properties.getProperty("get.logins"); 
+	public List<UniformBean> getuniforms(){
+		String sql = properties.getProperty("get.uniforms"); 
 		
 		GetConnection gc  = new GetConnection(); 
 		List<UniformBean> list = null;
@@ -57,6 +57,6 @@ public class UniformDAO {
 	}
 	
 	public static void main(String[] args) {
-		new UniformDAO().getLogins().forEach(System.out :: println);
+		new UniformDAO().getuniforms().forEach(System.out :: println);
 	}
 }
